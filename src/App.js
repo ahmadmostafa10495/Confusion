@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import {Nav, Navbar,NavbarBrand, NavDropdown, MenuItem, Tabs, ButtonToolbar, Button, Table, ButtonGroup, Row, Col, Grid, Panel, FormGroup, FormControl} from 'reactstrap';
 import Menu from './components/MenuComponent';
 import './App.css';
+import { DISHES } from './shared/dishes';
 
 // function App() {
 //   return (
@@ -27,6 +28,15 @@ import './App.css';
 // }
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      dishes: DISHES
+    };
+  }
+
   render() {
     return (
       <div>
@@ -35,7 +45,7 @@ class App extends Component {
           <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
         </div>
         </Navbar>
-        <Menu />
+        <Menu dishes={this.state.dishes}/>
       </div>
 
       );
