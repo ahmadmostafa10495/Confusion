@@ -74,7 +74,7 @@ class CommentForm extends Component {
                                        />
                                 <Errors
                                     className="text-danger"
-                                    model=".author"
+                                    model=".author"  
                                     show="touched"
                                     messages={{
                                         required: 'Required ',
